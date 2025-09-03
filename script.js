@@ -1,1 +1,1 @@
-alert('Games eduuu viado');
+console.log('Texto');
