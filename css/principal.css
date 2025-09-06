@@ -1,0 +1,34 @@
+html{
+    font-size: 60.5%;
+}
+body{
+    font-family: 'sans-serif';
+    margin: 0;
+    background-color: #2D7279;
+}
+#topo{
+    display: flex;
+    font-size: 1.6em;
+    justify-content: space-between;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding-left: 2em;
+    padding-right: 2em;
+    border-bottom: black solid 0.1em;
+    height: 4em;
+    position: sticky;
+}
+.nav-options a{
+    justify-content: first baseline;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.nav-options ul {
+    list-style: none;
+    display: flex;
+    margin-top: 2em;
+    gap: 2em;
+}
+.nav-options a:hover{
+    color:gray;
+}
