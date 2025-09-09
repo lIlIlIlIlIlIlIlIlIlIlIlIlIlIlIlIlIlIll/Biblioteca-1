@@ -4,24 +4,28 @@ html{
 body{
     font-family: 'sans-serif';
     margin: 0;
-    background-color: #2D7279;
+    background-color: #68181F;
 }
 #topo{
     display: flex;
     font-size: 1.6em;
-    justify-content: space-between;
-    background-color: #ffffff;
+    background-color: #F1E6D2;
     color: rgb(0, 0, 0);
     padding-left: 2em;
     padding-right: 2em;
     border-bottom: black solid 0.1em;
     height: 4em;
-    position: sticky;
 }
 .nav-options a{
-    justify-content: first baseline;
     color: rgb(0, 0, 0);
     text-decoration: none;
+    padding: 10px;
+    background-color: #AC3030;
+    border-radius: 50%;
+    padding-left: 3em;
+    padding-right: 3em;
+    position: relative;
+    bottom: 50%;
 }
 .nav-options ul {
     list-style: none;
