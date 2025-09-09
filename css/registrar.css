@@ -19,7 +19,7 @@ body {
 }
 .container{
     display: flex;
-    background-color: #0A60BC;
+    background-color: #AC3030;
     justify-content: space-between;
     padding: 10em;
     border-radius: 1em;
@@ -83,13 +83,13 @@ input:not(:placeholder-shown) + label {
     font-size: 1em;
     background: #fff;
     padding: 0 4px;
-    color: #007bff;
+    color: #AC3030;
 }
 
 .login-btn {
     width: 100%;
     padding: 12px;
-    background: #0a60bc;
+    background: #AC3030;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -99,7 +99,7 @@ input:not(:placeholder-shown) + label {
 }
 
 .login-btn:hover {
-    background: #0056b3;
+    background: #7c2222;
 }
 
 .signup-link {
