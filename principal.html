@@ -10,19 +10,39 @@
 
 <body>
     <header id="topo"></header>
-        <div class="menu">
-            <div>
-                <div class="perfil">
-                    <img src="#" alt="Foto perfil">
-                    <p>NOME</p>
-                </div>
-                <ul>
-                    <li>Cadastro Livros</li>
-                    <li>Cadastro Alunos</li>
-                </ul>
+    <div class="menu">
+        <div>
+            <div class="perfil">
+                <p id="menu-name">NOME</p>
             </div>
-            <div class="config">configurações</div>
+            <ul>
+                <li>Cadastro Livros</li>
+                <li>Cadastro Alunos</li>
+            </ul>
         </div>
+    </div>
+    <main>
+        <h1>Livros:</h1>
+    </main>
+    <div class="calendario">
+        <div class="calendario-header" id="mes-ano"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dom</th>
+                    <th>Seg</th>
+                    <th>Ter</th>
+                    <th>Qua</th>
+                    <th>Qui</th>
+                    <th>Sex</th>
+                    <th>Sáb</th>
+                </tr>
+            </thead>
+            <tbody id="dias-calendario">
+            </tbody>
+        </table>
+
+    </div>
     <script src="js/principal.js"></script>
 </body>
 
