@@ -19,7 +19,7 @@ body {
 }
 .container{
     display: flex;
-    background-color: #AC3030;
+    background-color:#2f5c9c;
     justify-content: space-between;
     padding: 10em;
     border-radius: 1em;
@@ -83,13 +83,13 @@ input:not(:placeholder-shown) + label {
     font-size: 1em;
     background: #fff;
     padding: 0 4px;
-    color: #AC3030;
+    color: #4289EB;
 }
 /*Botão 'Entrar'*/
 .login-btn {
     width: 100%;
     padding: 12px;
-    background: #AC3030;
+    background: #4289EB;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -99,7 +99,7 @@ input:not(:placeholder-shown) + label {
 }
 /*Curso em cima do botão*/
 .login-btn:hover {
-    background: #7c2222;
+    background: #27518d;
 }
 /*Estilo texto não tenho conta*/
 .signup-link {
@@ -128,5 +128,6 @@ input:not(:placeholder-shown) + label {
 .success-message.show {
     display: block;
 }
+
 
 
