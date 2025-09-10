@@ -33,6 +33,7 @@
     //Se tudo estiver válido
         if (valid) {
           //Redirecionar patra a pagina principal
-          window.location.href = "../principal.html";
+          window.location.href = "./principal.html";
         }
+
       });
