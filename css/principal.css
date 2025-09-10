@@ -1,87 +1,141 @@
-html{
-    font-size: 60.5%;
+html {
+  font-size: 60.5%;
 }
-body{
-    font-family: 'sans-serif';
-    margin: 0;
-    background-color: #EFDBBF;
-    padding: 0;
+
+body {
+  font-family: 'sans-serif';
+  margin: 0;
+  background-color: #EFDBBF;
+  padding: 0;
 }
-#topo{
-    display: flex;
-    font-size: 1.6em;
-    justify-content: space-between;
-    background-color: #8b1e22;
-    color: rgb(0, 0, 0);
-    padding-left: 2em;
-    padding-right: 2em;
-    border-bottom: black solid 0.1em;
-    height: 4em;
-    position: sticky;
+
+#topo {
+  display: flex;
+  font-size: 1.6em;
+  justify-content: space-between;
+  background-color: #8b1e22;
+  color: rgb(0, 0, 0);
+  padding-left: 2em;
+  padding-right: 2em;
+  border-bottom: black solid 0.1em;
+  height: 4em;
+  position: sticky;
 }
-.nav-options a{
-    justify-content: first baseline;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
+
+.nav-options a {
+  justify-content: first baseline;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
 }
+
 .nav-options ul {
-    list-style: none;
-    display: flex;
-    margin-top: 2em;
-    gap: 2em;
+  list-style: none;
+  display: flex;
+  margin-top: 2em;
+  gap: 2em;
 }
-.nav-options a:hover{
-    color:gray;
+
+.nav-options a:hover {
+  color: gray;
 }
- .menu {
-      width: 220px;
-      height: 100vh;
-      background: #8b1e22;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 20px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      margin-top: 4.2%;
-    }
 
-    .perfil {
-      text-align: center;
-    }
+.menu {
+  width: 220px;
+  height: 100vh;
+  background: #8b1e22;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 4%;
+}
 
-    .perfil img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: #fff;
-      margin-bottom: 10px;
-    }
+.perfil {
+  text-align: center;
+}
 
-    .perfil p {
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
+.perfil p {
+  margin-bottom: 2em;
+  font-size: 2em;
+}
 
-    .menu ul {
-      list-style: none;
-      padding: 0;
-    }
+.menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 75%;
+}
 
-    .menu ul li {
-      margin: 15px 0;
-      cursor: pointer;
-      font-size: 14px;
-    }
+.menu ul li {
+  margin: 15px 0;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #EFDBBF;
+  color: black;
+  padding: 1em;
+}
 
-    .menu ul li:hover {
-      text-decoration: underline;
-    }
+.menu ul li:hover {
+    background-color: #a48b68;
+}
+.calendario {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 340px;
+  position: absolute;
+  left: 70%;
+  top: 20%;
+}
 
-    .config {
-      text-align: center;
-      font-size: 22px;
-      cursor: pointer;
-    }
+.calendario-header {
+  background-color: #8B1E22;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: #666;
+}
+
+td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+td:hover {
+  background-color: #e6f2ff;
+  cursor: pointer;
+}
+
+.dia-atual {
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 50%;
+}
+
+.fim-de-semana {
+  color: #888;
+}
