@@ -21,7 +21,15 @@ body {
   height: 4em;
   position: sticky;
 }
-
+.menu-perfil{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 70%;
+  text-decoration: none;
+  color:white;
+  font-size: 1.2em;
+}
 .nav-options a {
   justify-content: first baseline;
   color: rgb(0, 0, 0);
@@ -51,8 +59,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  margin-top: 4.1%;
-  border-right: white solid 0.2em;
+  box-shadow: 0 0px 5px rgba(0,0,0,2);
 }
 
 .perfil {
@@ -73,7 +80,10 @@ body {
   position: relative;
   top: 75%;
 }
-
+.menu li a{
+  text-decoration: none;
+  color: black;
+}
 .menu ul li {
   margin: 15px 0;
   cursor: pointer;
@@ -81,10 +91,27 @@ body {
   background-color: #EFDBBF;
   color: black;
   padding: 1em;
+  margin-bottom: 0.3em;
+  width: 7em;
+  text-align: center;
+}
+.back{
+  position: absolute;
+  top: 90%;
+}
+.back a{
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
 }
 
 .menu ul li:hover {
-    background-color: #315f9a;
+  background-color: #e0e0e0;
+}
+.livro{
+  position: absolute;
+  left: 20%;
+  top: 3%;
 }
 .calendario {
   border: 1px solid #ccc;
@@ -95,7 +122,7 @@ body {
   width: 340px;
   position: absolute;
   left: 70%;
-  top: 20%;
+  top: 10%;
 }
 
 .calendario-header {
