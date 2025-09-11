@@ -88,7 +88,7 @@ body {
   margin: 15px 0;
   cursor: pointer;
   font-size: 14px;
-  background-color: #EFDBBF;
+  background-color: rgb(206, 206, 206);
   color: black;
   padding: 1em;
   margin-bottom: 0.3em;
@@ -110,7 +110,7 @@ body {
 }
 .livro{
   position: absolute;
-  left: 20%;
+  left: 30em;
   top: 3%;
 }
 .calendario {
