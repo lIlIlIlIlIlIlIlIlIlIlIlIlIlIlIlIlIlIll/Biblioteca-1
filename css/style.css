@@ -41,7 +41,7 @@ body{
     height: 100vh;
     background: url("../assets/background-img.jpg") no-repeat center;
     background-size: cover;
-    width: 50%;
+    width: 100%;
 }
 .container-text{
     font-family: horizon;
