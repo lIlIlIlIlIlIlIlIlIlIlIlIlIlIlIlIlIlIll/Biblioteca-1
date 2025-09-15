@@ -1,0 +1,74 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: white;
+}
+.topo {
+    background-color: #315F9A;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.topo li {
+    list-style-type: none;
+}
+.topo li a {
+    text-decoration: none;
+    color: white;
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+}
+.search-container input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #5676a0;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.book-carousel {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+.book {
+    min-width: 200px;
+    border-radius: 12px;
+    background: #315F9A;
+    padding: 10px;
+    text-align: center;
+    flex-shrink: 0;
+    color: white;
+}
+.book img {
+    width: 100%;
+    border-radius: 10px;
+}
+.book-carousel::-webkit-scrollbar {
+    display: none;
+}
+.title{
+    display: inline-block;
+    position: absolute;
+    left: 40%;
+    top: 10%;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+}
+.container {
+    margin-top: 50x;
+}
+body {
+    padding-top: 50px;
+}
