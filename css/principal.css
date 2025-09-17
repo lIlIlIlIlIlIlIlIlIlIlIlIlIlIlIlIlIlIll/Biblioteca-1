@@ -9,43 +9,6 @@ body {
   padding: 0;
 }
 
-#topo {
-  display: flex;
-  font-size: 1.6em;
-  justify-content: space-between;
-  background-color: #315f9a;
-  color: rgb(0, 0, 0);
-  padding-left: 2em;
-  padding-right: 2em;
-  border-bottom: rgb(255, 255, 255) solid 0.2em;
-  height: 4em;
-  position: sticky;
-}
-.menu-perfil{
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 70%;
-  text-decoration: none;
-  color:white;
-  font-size: 1.2em;
-}
-.nav-options a {
-  justify-content: first baseline;
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-}
-
-.nav-options ul {
-  list-style: none;
-  display: flex;
-  margin-top: 2em;
-  gap: 2em;
-}
-
-.nav-options a:hover {
-  color: gray;
-}
 
 .menu {
   width: 220px;
@@ -59,31 +22,21 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 0 0px 5px rgba(0,0,0,2);
+  box-shadow: 0 0px 5px rgba(0,0,0,0.2);
 }
 
-.perfil {
+.menu h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
   text-align: center;
 }
 
-.perfil p {
-  margin-bottom: 2em;
-  font-size: 2em;
-}
-
 .menu ul {
-  display: flex;
   list-style: none;
   padding: 0;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  top: 75%;
+  margin: 0;
 }
-.menu li a{
-  text-decoration: none;
-  color: black;
-}
+
 .menu ul li {
   margin: 15px 0;
   cursor: pointer;
@@ -91,28 +44,43 @@ body {
   background-color: rgb(206, 206, 206);
   color: black;
   padding: 1em;
-  margin-bottom: 0.3em;
-  width: 7em;
   text-align: center;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
-.back{
-  position: absolute;
-  top: 90%;
-}
-.back a{
-  font-size: 18px;
+
+.menu ul li a {
   text-decoration: none;
-  color: white;
+  color: black;
+  display: block;
 }
 
 .menu ul li:hover {
   background-color: #e0e0e0;
 }
-.livro{
-  position: absolute;
-  left: 30em;
-  top: 3%;
+
+.back {
+  text-align: center;
 }
+
+.back a {
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  background-color: #1d3f6e;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background 0.3s;
+  position: relative;
+  bottom: 70%;
+}
+
+.back a:hover {
+  background-color: #274d87;
+}
+
+/* CALENDÁRIO */
 .calendario {
   border: 1px solid #ccc;
   border-radius: 10px;
