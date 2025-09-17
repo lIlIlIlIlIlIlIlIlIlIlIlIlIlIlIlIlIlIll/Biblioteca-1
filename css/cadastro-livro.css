@@ -1,74 +1,86 @@
 body {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
-    background: white;
+    padding: 0;
+    background: #f5f5f5;
 }
+
 .topo {
     background-color: #315F9A;
     color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
+    padding: 15px;
 }
-.topo li {
-    list-style-type: none;
+
+.topo ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-.topo li a {
+
+.topo ul li {
+    display: inline;
+}
+
+.topo ul li a {
+    color: white;
     text-decoration: none;
-    color: white;
+    font-weight: bold;
 }
-.search-container {
+
+.container {
     display: flex;
     justify-content: center;
-    margin: 80px 0;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 60px auto;
+    max-width: 900px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-.search-container input {
-    width: 300px;
-    padding: 10px;
-    border: 2px solid #5676a0;
-    border-radius: 8px;
-    font-size: 16px;
-}
-.book-carousel {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-}
-.book {
-    min-width: 200px;
-    border-radius: 12px;
-    background: #315F9A;
-    padding: 10px;
-    text-align: center;
-    flex-shrink: 0;
-    color: white;
-}
-.book img {
-    width: 100%;
+
+.livro-img img {
+    max-width: 250px;
     border-radius: 10px;
 }
-.book-carousel::-webkit-scrollbar {
-    display: none;
-}
-.title{
-    display: inline-block;
-    position: absolute;
-    left: 40%;
-    top: 10%;
-}
-.head{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
 
+.form {
+    flex: 1;
 }
-.container {
-    margin-top: 50x;
+
+.form h2 {
+    margin-bottom: 20px;
+    color: #315F9A;
 }
-body {
-    padding-top: 50px;
+
+.form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form input, 
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form button {
+    margin-top: 15px;
+    background: #315F9A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form button:hover {
+    background: #24466d;
 }
