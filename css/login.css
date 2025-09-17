@@ -12,10 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #f0f2f5;
-    background-image: url('../assets/background-img.jpg');
-    background-size: cover;
-    background-attachment: fixed;
+    background: linear-gradient(90deg, #235596, #4A90E2);
 }
 .container{
     display: flex;
