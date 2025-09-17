@@ -131,8 +131,6 @@ main {
     padding: 2em;
     border-radius: 10px;
     display: flex;
-    position: absolute;
-    left: 25%;
-    top: 5%;
+    justify-content: center;
 }
 
