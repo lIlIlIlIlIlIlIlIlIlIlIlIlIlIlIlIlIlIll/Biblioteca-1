@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- Suporte a acentos -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/login.css"> <!-- Link Estilos-->
     <title>Login</title>
 </head>
 <body>
+    <!-- Container geral do login -->
     <div class="login-container">
+        <!-- Cartão de login -->
         <div class="login-card">
+            <!-- Cabeçalho -->
             <div class="login-header">
                 <h2>Faça Login</h2>
             </div>
             
+            <!-- Formulário de login -->
             <form class="login-form" id="loginForm" novalidate>
+                <!-- Campo de email -->
                 <div class="form-group">
                     <div class="input-wrapper">
                         <input type="email" id="email" name="email" required autocomplete="email">
@@ -22,6 +27,7 @@
                     <span class="error-message" id="emailError" style="color:red; font-size:0.9em;"></span>
                 </div>
 
+                <!-- Campo de senha -->
                 <div class="form-group">
                     <div class="input-wrapper password-wrapper">
                         <input type="password" id="password" name="password" required autocomplete="current-password">
@@ -30,15 +36,16 @@
                     <span class="error-message" id="passwordError" style="color:red; font-size:0.9em;"></span>
                 </div>
 
+                <!-- Botão de login -->
                 <button type="submit" class="login-btn">
                     <span class="btn-text">Entrar</span>
-                    <span class="btn-loader"></span>
+                    <span class="btn-loader"></span> <!-- Carregamento -->
                 </button>
             </form>
         </div>
     </div>
-</div>
+
+    <!-- Link JavaScript -->
     <script src="js/login.js"></script>
 </body>
 </html>
-
