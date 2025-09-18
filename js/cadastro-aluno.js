@@ -16,32 +16,32 @@ form.addEventListener("submit", function (event) {
 
   // Verifica campos obrigatórios
   if (!nome || !matricula || !turma || !email || !telefone || !cpf || !endereco) {
-    alert("⚠️ Preencha todos os campos!");
+    alert("⚠ Preencha todos os campos!");
     return;
   }
 
   // Validação simples de e-mail
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
-    alert("⚠️ Digite um e-mail válido!");
+    alert("⚠ Digite um e-mail válido!");
     return;
   }
 
   // Validação básica do CPF
   if (cpf.length !== 11) {
-    alert("⚠️ CPF deve ter 11 números (sem pontos ou traços)!");
+    alert("⚠ CPF deve ter 11 números (sem pontos ou traços)!");
     return;
   }
 
   // Rejeita CPFs com todos os dígitos iguais
   if (/^(\d)\1{10}$/.test(cpf)) {
-    alert("⚠️ CPF inválido!");
+    alert("⚠ CPF inválido!");
     return;
   }
 
   // Validação matemática do CPF
   if (!validarCPF(cpf)) {
-    alert("⚠️ CPF inválido!");
+    alert("⚠ CPF inválido!");
     return;
   }
 
