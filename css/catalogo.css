@@ -1,8 +1,10 @@
+/*Estilo do corpo do site*/
 body {
     font-family: sans-serif;
     margin: 0;
     background: white;
 }
+/*estilo do cabeçalho do site*/
 .topo {
     background-color: #315F9A;
     color: white;
@@ -19,6 +21,7 @@ body {
     text-decoration: none;
     color: white;
 }
+/*Estilo da aba de pesquisa*/
 .search-container {
     display: flex;
     justify-content: center;
@@ -31,6 +34,7 @@ body {
     border-radius: 8px;
     font-size: 16px;
 }
+/*Estilo dos livros*/
 .book-carousel {
     display: flex;
     gap: 20px;
@@ -46,6 +50,7 @@ body {
     flex-shrink: 0;
     color: white;
 }
+/*Estilo da imagem dos livros*/
 .book img {
     width: 100%;
     border-radius: 10px;
