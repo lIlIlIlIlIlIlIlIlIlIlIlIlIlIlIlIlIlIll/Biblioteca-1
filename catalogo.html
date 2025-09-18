@@ -5,33 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogo</title>
-    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/catalogo.css"> <!-- Link CSS -->
 </head>
 
 <body>
+    <!-- Cabeçalho com botão de voltar -->
     <header class="topo">
         <ul>
-            <li><a href="principal.html">Voltar</a></li>
+            <li><a href="principal.html">Voltar</a></li> <!-- Link para a página principal -->
         </ul>
     </header>
+
+    <!-- Barra de pesquisa -->
     <div class="search-container">
-        <input type="text" id="search" placeholder="Pesquisar livros...">
+        <input type="text" id="search" placeholder="Pesquisar livros..."> <!-- Campo de pesquisa -->
     </div>
 
+    <!-- Lista de livros em carrossel -->
     <div class="book-carousel" id="bookList">
+        <!-- Livro 1 -->
         <div class="book">
             <img src="https://m.media-amazon.com/images/I/71Uyt0cCKgL.jpg" alt="A Hora da Estrela">
             <p>Clarice Lispector - A Hora da Estrela</p>
         </div>
+        <!-- Livro 2 -->
         <div class="book">
             <img src="https://m.media-amazon.com/images/I/81kz1FJUMXL.jpg" alt="O Mulato">
             <p>Aluísio Azevedo - O Mulato</p>
         </div>
+        <!-- Livro 3 -->
         <div class="book">
             <img src="https://m.media-amazon.com/images/I/81yE2XtPcbL.jpg" alt="Dom Casmurro">
             <p>Machado de Assis - Dom Casmurro</p>
         </div>
     </div>
+
+    <!-- Link JavaScript -->
     <script src="js/catalogo.js"></script>
 </body>
 
