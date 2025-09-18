@@ -8,6 +8,7 @@ body {
     background-color: white;
 }
 
+/* Cabeçalho */
 #topo {
     display: flex;
     font-size: 1.6em;
@@ -22,10 +23,8 @@ body {
 .nav-options a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 3em;
     border-radius: 7dvh;
-    padding-left: 3em;
-    padding-right: 3em;
     position: relative;
     bottom: 50%;
     transition: 0.3s;
@@ -38,23 +37,30 @@ body {
     gap: 2em;
 }
 
+/* Layout principal */
+.main-container {
+    display: flex;
+    height: calc(100vh - 4em);
+}
+
+/* Metade esquerda*/
+.left-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
 .title {
     font-size: 7em;
-    position: absolute;
-    top: 35%;
-    left: 10%;
     border-left: #4289EB solid 0.2em;
     padding-left: 0.2em;
 }
 
-.container-text {
-    font-family: horizon;
-    text-align: end;
-    position: absolute;
-    left: 70%;
-    top: 20%;
-    font-size: 2em;
-    color: #ffffff;
-    width: min-content;
-    text-align: right;
+.right-content {
+    flex: 1;
+    background-image: url('../assets/background-img.jpg');
+    background-size: cover;
+    background-position: center; 
 }
