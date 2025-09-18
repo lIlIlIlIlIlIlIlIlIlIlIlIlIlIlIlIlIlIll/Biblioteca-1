@@ -1,3 +1,4 @@
+/*Estilo do corpo do site*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,6 +6,7 @@ body {
     background: #f5f5f5;
 }
 
+/*Estilo do cabeçalho do site*/
 .topo {
     background-color: #315F9A;
     color: white;
@@ -27,6 +29,7 @@ body {
     font-weight: bold;
 }
 
+/*Estilo do container do cadastro*/
 .container {
     display: flex;
     justify-content: center;
@@ -39,6 +42,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+/*Estilo do formulario*/
 .form {
     flex: 1;
 }
