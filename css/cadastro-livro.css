@@ -1,60 +1,90 @@
+/*Estilo do corpo do site*/
 body {
-  font-family: sans-serif;
-  margin: 0;
-  background: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
 }
+
+/*Estilo do cabeçalho do site*/
 .topo {
-  background-color: #315F9A;
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+    background-color: #315F9A;
+    color: white;
+    padding: 15px;
 }
-.topo li {
-  list-style-type: none;
+
+.topo ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-.topo li a {
-  text-decoration: none;
-  color: white;
+
+.topo ul li {
+    display: inline;
 }
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin: 80px 0;
+
+.topo ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
-.search-container input {
-  width: 300px;
-  padding: 10px;
-  border: 2px solid #5676a0;
-  font-size: 16px;
+
+/*Estilo do conatiner do cadastro*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 60px auto;
+    max-width: 900px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-.book-carousel {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+
+/*Estilo da imagem do livro*/
+.livro-img img {
+    max-width: 250px;
+    border-radius: 10px;
 }
-.book {
-  min-width: 200px;
-  background: #315F9A;
-  padding: 10px;
-  text-align: center;
-  flex-shrink: 0;
-  color: white;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+
+/*Estilo do formulario*/
+.form {
+    flex: 1;
 }
-.book:hover{
-    color: rgba(0, 0, 0, 0.7);
+
+.form h2 {
+    margin-bottom: 20px;
+    color: #315F9A;
 }
-.book img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 10px;
+
+.form label {
+    display: block;
+    margin-top: 10px;
 }
-.book p {
-  margin-top: 10px;
+
+.form input, 
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form button {
+    margin-top: 15px;
+    background: #315F9A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form button:hover {
+    background: #24466d;
 }
