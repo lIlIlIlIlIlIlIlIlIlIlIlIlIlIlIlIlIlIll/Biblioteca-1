@@ -1,5 +1,6 @@
-        const searchInput = document.getElementById("search");
-        const alunoList = document.getElementById("alunoList");
+//Pega o elemento pelo id
+const searchInput = document.getElementById("search");
+const alunoList = document.getElementById("alunoList");
 
         // Função para carregar alunos do localStorage
         function carregarAlunos() {
