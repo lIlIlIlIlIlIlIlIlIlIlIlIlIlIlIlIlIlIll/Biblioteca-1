@@ -1,87 +1,90 @@
 body {
-      font-family: sans-serif;
-      margin: 0;
-      background: white;
-    }
+  font-family: sans-serif;
+  margin: 0;
+  background: white;
+}
 
-    .topo {
-      background-color: #315F9A;
-      color: white;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      padding: 10px;
-    }
+/*Estilo do cabeçalho do site*/
+.topo {
+    background-color: #315F9A;
+    color: white;
+    padding: 15px;
+}
 
-    .topo li {
-      list-style-type: none;
-    }
+.topo ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
-    .topo li a {
-      text-decoration: none;
-      color: white;
-    }
+.topo ul li {
+    display: inline;
+}
 
-    .search-container {
-      display: flex;
-      justify-content: center;
-      margin: 80px 0 20px 0;
-    }
+.topo ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    .search-container input {
-      width: 300px;
-      padding: 10px;
-      border: 2px solid #5676a0;
-      font-size: 16px;
-    }
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 20px 0;
+}
 
-    .book-carousel {
-      display: flex;
-      gap: 20px;
-      padding: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+.search-container input {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid #5676a0;
+  font-size: 16px;
+}
 
-    .book {
-      position: relative;
-      width: 200px;
-      background: #315F9A;
-      padding: 10px;
-      text-align: center;
-      flex-shrink: 0;
-      color: white;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-      border-radius: 10px;
-    }
+.book-carousel {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-    .book img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
+.book {
+  position: relative;
+  width: 200px;
+  background: #315F9A;
+  padding: 10px;
+  text-align: center;
+  flex-shrink: 0;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
 
-    .book p {
-      margin-top: 10px;
-    }
+.book img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
-    /* Botão de remover */
-    .remove-btn {
-      position: absolute;
-      top: 5px;
-      cursor: pointer;
-      font-size: 18px;
-      color: red;
-      font-weight: bold;
-      background: white;
-      border-radius: 50%;
-      padding: 2px 6px;
-    }
+.book p {
+  margin-top: 10px;
+}
 
-    .remove-btn:hover {
-      background: darkred;
-      color: white;
-    }
+/* Botão de remover */
+.remove-btn {
+  position: absolute;
+  top: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  color: red;
+  font-weight: bold;
+  background: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+.remove-btn:hover {
+  background: darkred;
+  color: white;
+}
