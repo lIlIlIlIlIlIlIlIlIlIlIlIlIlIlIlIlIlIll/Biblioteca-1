@@ -1,6 +1,5 @@
-//Pega o elemento pelo id
-const searchInput = document.getElementById("search");
-const alunoList = document.getElementById("alunoList");
+        const searchInput = document.getElementById("search");
+        const alunoList = document.getElementById("alunoList");
 
         // Função para carregar alunos do localStorage
         function carregarAlunos() {
@@ -16,7 +15,7 @@ const alunoList = document.getElementById("alunoList");
                     <button class="delete-btn" onclick="apagarAluno(${index})">×</button>
                     <p>
                         <strong>${aluno.nome}</strong><br>
-                        Matrícula: ${aluno.matricula}<br>
+                        Email: ${aluno.email}<br>
                         Turma: ${aluno.turma}
                     </p>
                 `;
