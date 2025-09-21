@@ -1,60 +1,88 @@
 body {
-  font-family: sans-serif;
-  margin: 0;
-  background: white;
-}
-.topo {
-  background-color: #315F9A;
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-.topo li {
-  list-style-type: none;
-}
-.topo li a {
-  text-decoration: none;
-  color: white;
-}
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin: 80px 0;
-}
-.search-container input {
-  width: 300px;
-  padding: 10px;
-  border: 2px solid #5676a0;
-  font-size: 16px;
-}
-.book-carousel {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.book {
-  min-width: 200px;
-  background: #315F9A;
-  padding: 10px;
-  text-align: center;
-  flex-shrink: 0;
-  color: white;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-}
-.book:hover{
-    color: rgba(0, 0, 0, 0.7);
-}
-.book img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-.book p {
-  margin-top: 10px;
-}
+      font-family: sans-serif;
+      margin: 0;
+      background: white;
+    }
+
+    .topo {
+      background-color: #315F9A;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 10px;
+    }
+
+    .topo li {
+      list-style-type: none;
+    }
+
+    .topo li a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin: 80px 0 20px 0;
+    }
+
+    .search-container input {
+      width: 300px;
+      padding: 10px;
+      border: 2px solid #5676a0;
+      font-size: 16px;
+    }
+
+    .book-carousel {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .book {
+      position: relative;
+      width: 200px;
+      background: #315F9A;
+      padding: 10px;
+      text-align: center;
+      flex-shrink: 0;
+      color: white;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+
+    .book img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .book p {
+      margin-top: 10px;
+    }
+
+    /* Botão de remover */
+    .remove-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: red;
+      font-weight: bold;
+      background: white;
+      border-radius: 50%;
+      padding: 2px 6px;
+    }
+
+    .remove-btn:hover {
+      background: darkred;
+      color: white;
+    }
