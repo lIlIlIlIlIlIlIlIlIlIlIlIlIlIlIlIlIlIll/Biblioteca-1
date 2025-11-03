@@ -100,17 +100,7 @@ input:not(:placeholder-shown) + label {
 .login-btn:hover {
     background: #27518d;
 }
-/*Estilo texto não tenho conta*/
-.signup-link {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 0.9rem;
-}
-/*Estilo do link não tenho conta*/
-.signup-link a {
-    color: #007bff;
-    text-decoration: none;
-}
+
 /*Estilo ao passar o mouse em cima do link*/
 .signup-link a:hover {
     text-decoration: underline;
@@ -128,4 +118,16 @@ input:not(:placeholder-shown) + label {
     display: block;
 }
 
+/* 🔴 Estilo de erro para inputs */
+.input-error {
+    border: 2px solid red !important;
+    background-color: #ffe6e6;
+}
 
+/* 🔴 Mensagens de erro abaixo dos campos */
+.error-message {
+    font-size: 0.85em;
+    color: red;
+    margin-top: 4px;
+    display: block;
+}
