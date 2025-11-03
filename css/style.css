@@ -1,60 +1,106 @@
 html {
-    font-size: 60.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: 'sans-serif';
-    margin: 0;
-    background-color: white;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #f5f8ff, #e1ecff);
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* Cabeçalho */
 #topo {
-    display: flex;
-    font-size: 1.6em;
-    background: linear-gradient(90deg, #315F9A, #4A90E2);
-    color: rgb(0, 0, 0);
-    padding-left: 2em;
-    padding-right: 2em;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: linear-gradient(90deg, #315F9A, #4A90E2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  height: 6rem;
+  padding: 0 3rem;
 }
 
+/* Botão LOGIN */
 .nav-options a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 3em;
-    border-radius: 7dvh;
-    position: relative;
-    bottom: 50%;
-    transition: 0.3s;
+  color: white;
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding: 1rem 3rem;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.nav-options a:hover {
+  background: white;
+  color: #2d5fa6;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .nav-options ul {
-    list-style: none;
-    display: flex;
-    margin-top: 2em;
-    gap: 2em;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 /* Layout principal */
 .main-container {
-    display: flex;
-    height: calc(100vh - 4em);
+  display: flex;
+  height: calc(100vh - 6rem);
+  justify-content: center;
+  align-items: center;
 }
 
-/* Metade esquerda*/
+/* Lado esquerdo */
 .left-content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
+  text-align: center;
 }
 
 .title {
-    font-size: 7em;
-    border-left: #4289EB solid 0.2em;
-    padding-left: 0.2em;
+  font-size: 8rem;
+  font-weight: 700;
+  color: #0d1c3d;
+  position: relative;
+  display: inline-block;
+  padding-left: 0.4em;
 }
 
+/* Barra azul estilizada */
+.title::before {
+  content: "";
+  position: absolute;
+  left: -0.25em;
+  top: 0;
+  width: 0.2em;
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #4a90e2, #3373c4);
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.6);
+  animation: glow 2s infinite alternate ease-in-out;
+}
+
+/* Efeito de brilho */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.4);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.8);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .title {
+    font-size: 5rem;
+  }
+
+  .nav-options a {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+  }
+}
