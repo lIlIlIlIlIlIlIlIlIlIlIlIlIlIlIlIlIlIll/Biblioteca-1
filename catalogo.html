@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo</title>
   <link rel="stylesheet" href="css/catalogo.css">
-  <link rel="shortcut icon" type="image/png" href="assets/45901561.png"/>
 </head>
-
 <body>
   <header class="topo">
     <ul>
@@ -21,10 +18,35 @@
   </div>
 
   <div class="book-carousel" id="bookList">
-    <!-- Livros serão carregados via JavaScript -->
+    <!-- Livros carregados via JS -->
   </div>
 
-<script src="js/catalogo.js"></script>
-</body>
+  <!-- === Modal de Edição === -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <h2>Editar Livro</h2>
+      <label>Nome:</label>
+      <input type="text" id="editNome">
 
+      <label>Autor:</label>
+      <input type="text" id="editAutor">
+
+      <label>Sumário:</label>
+      <textarea id="editSumario"></textarea>
+
+      <label>Localização:</label>
+      <input type="text" id="editLocalizacao">
+
+      <label>URL da Imagem:</label>
+      <input type="text" id="editImagem">
+
+      <div class="modal-buttons">
+        <button id="salvarEdicao">Salvar</button>
+        <button id="cancelarEdicao">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/catalogo.js"></script>
+</body>
 </html>
