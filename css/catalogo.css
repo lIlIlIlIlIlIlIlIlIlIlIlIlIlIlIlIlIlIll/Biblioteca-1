@@ -168,12 +168,13 @@ body {
 .modal-content h2 {
   margin-top: 0;
   color: #315F9A;
+  margin-bottom: 16px;
 }
 
 .modal-content input,
 .modal-content textarea {
   width: 100%;
-  margin-top: 8px;
+  margin-top: 1px;
   margin-bottom: 15px;
   padding: 8px;
   border: 1px solid #ccc;
@@ -182,9 +183,9 @@ body {
 
 .modal-buttons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 10px;
-  margin-top: 15px;
+  margin-top: 4px;
 }
 
 .modal-buttons button {
