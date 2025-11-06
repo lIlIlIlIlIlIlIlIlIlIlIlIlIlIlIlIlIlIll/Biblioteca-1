@@ -20,6 +20,14 @@ let reserveBookIndex = null;
 const getDados = (key) => JSON.parse(localStorage.getItem(key)) ?? [];
 const setDados = (key, data) => localStorage.setItem(key, JSON.stringify(data));
 
+// Função utilitária para formatar a data (YYYY-MM-DD) para o input type="date"
+const getTodayDateString = () => {
+    const today = new Date();
+    // Ajusta o fuso horário para garantir que seja a data de hoje
+    today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+    return today.toISOString().split('T')[0];
+};
+
 // Renderiza a lista de livros
 function carregarLivros() {
     DOMElements.bookList.innerHTML = "";
@@ -28,6 +36,20 @@ function carregarLivros() {
     livros.forEach((livro, index) => {
         const card = document.createElement("div");
         card.classList.add("book");
+        
+        // Determina o status da reserva e a data de devolução
+        let reserveInfo = '';
+        if (livro.reservadoPor) {
+            reserveInfo = `<p class="reserved-status">Reservado para: <strong>${livro.reservadoPor}</strong>`;
+            if (livro.dataDevolucao) {
+                // Formata a data para exibição (DD/MM/AAAA)
+                const dateParts = livro.dataDevolucao.split('-');
+                const displayDate = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
+                reserveInfo += `<br><small>Devolução: ${displayDate}</small></p>`;
+            } else {
+                reserveInfo += `</p>`;
+            }
+        }
         
         // Cria o card do livro com botões de ação
         card.innerHTML = `
@@ -41,12 +63,14 @@ function carregarLivros() {
             <img src="${livro.imagem || "https://via.placeholder.com/200x280?text=Sem+Capa"}" alt="${livro.nome}">
             <p><strong>${livro.autor}</strong> - ${livro.nome}<br>
             <small>${livro.localizacao}</small></p>
+            ${reserveInfo} 
         `;
         DOMElements.bookList.appendChild(card);
     });
 }
 
 // Funções de Gerenciamento CRUD (Remover, Editar, Reservar)
+// ... (removerLivro, abrirEdicao, salvarEdicao permanecem as mesmas)
 
 const removerLivro = (index) => {
     if (confirm("Tem certeza que deseja excluir este livro?")) {
@@ -100,15 +124,23 @@ function carregarAlunosParaReserva(livroIndex) {
     const livros = getDados(DADOS_KEY.LIVROS);
     const alunos = getDados(DADOS_KEY.ALUNOS);
     const livro = livros[livroIndex];
+    const dataMinima = getTodayDateString(); // Data mínima para devolução é hoje
 
     document.querySelector('#reserveModal h2').textContent = `Reservar: ${livro.nome}`;
 
     if (livro.reservadoPor) {
         // Mostra opção de liberar se já reservado
         document.querySelector('#reserveModal p').textContent = "O livro está reservado. Deseja liberar?";
+        
+        // Exibe a data de devolução no modal
+        const dataDevolucaoTexto = livro.dataDevolucao ? 
+            `<p>Data de Devolução Esperada: <strong>${livro.dataDevolucao.split('-').reverse().join('/')}</strong></p>` : 
+            '';
+
         DOMElements.studentListContainer.innerHTML = `
             <p><strong>Status: Reservado</strong></p>
             <p>Reservado por: <strong>${livro.reservadoPor}</strong></p>
+            ${dataDevolucaoTexto}
             <button id="liberarLivroBtn" class="cancel-reservation-btn">Cancelar Reserva</button>
         `;
         document.getElementById("liberarLivroBtn").addEventListener("click", () => liberarLivro(livroIndex, livro.reservadoPor));
@@ -116,18 +148,34 @@ function carregarAlunosParaReserva(livroIndex) {
     }
     
     // Lista alunos se o livro estiver disponível
-    document.querySelector('#reserveModal p').textContent = "Selecione um aluno para reservar o livro:";
+    document.querySelector('#reserveModal p').innerHTML = `
+        Selecione um aluno para reservar o livro:<br><br>
+        <label for="devolucao-date">Data de Devolução Esperada:</label>
+        <input type="date" id="devolucao-date" min="${dataMinima}" required>
+    `;
 
     if (alunos.length === 0) {
         DOMElements.studentListContainer.innerHTML = "<p>Nenhum aluno cadastrado para reserva.</p>";
         return;
     }
 
+    // Verifica se o aluno já reservou um livro
     alunos.forEach(aluno => {
+        const alunoJaReservou = livros.some(l => l.reservadoPor === aluno.nome);
+        
         const alunoItem = document.createElement("div");
         alunoItem.classList.add("student-item");
         alunoItem.textContent = `${aluno.nome} - Turma: ${aluno.turma}`;
-        alunoItem.onclick = () => reservarLivro(livroIndex, aluno.nome);
+        
+        if (alunoJaReservou) {
+            alunoItem.classList.add("reserved-student"); 
+            alunoItem.textContent += " (Já possui uma reserva)";
+            alunoItem.onclick = () => alert(`${aluno.nome} já possui um livro reservado e não pode reservar este.`);
+        } else {
+            // Passa o nome do aluno para a função de reserva
+            alunoItem.onclick = () => reservarLivro(livroIndex, aluno.nome);
+        }
+        
         DOMElements.studentListContainer.appendChild(alunoItem);
     });
 }
@@ -135,11 +183,28 @@ function carregarAlunosParaReserva(livroIndex) {
 const reservarLivro = (index, nomeAluno) => {
     const livros = getDados(DADOS_KEY.LIVROS);
     const livro = livros[index];
+    
+    // Captura a data de devolução do novo campo
+    const dataDevolucaoInput = document.getElementById("devolucao-date");
+    const dataDevolucao = dataDevolucaoInput?.value;
+
+    if (!dataDevolucao) {
+        alert("Por favor, selecione a data de devolução esperada.");
+        return;
+    }
+
+    // Checagem final antes de salvar
+    const alunoJaReservou = livros.some(l => l.reservadoPor === nomeAluno);
+    if (alunoJaReservou) {
+         alert(`${nomeAluno} já possui um livro reservado e não pode reservar este.`);
+         return; // Interrompe a reserva
+    }
 
     if (confirm(`Confirmar reserva do livro "${livro.nome}" para o aluno: ${nomeAluno}?`)) {
         livro.reservadoPor = nomeAluno;
+        livro.dataDevolucao = dataDevolucao; // Salva a data de devolução
         setDados(DADOS_KEY.LIVROS, livros);
-        alert(`Livro reservado com sucesso para ${nomeAluno}!`);
+        alert(`Livro reservado para ${nomeAluno}! Devolução esperada em: ${dataDevolucao.split('-').reverse().join('/')}`);
         DOMElements.reserveModal.style.display = "none";
         carregarLivros();
     }
@@ -151,6 +216,7 @@ const liberarLivro = (index, nomeAluno) => {
 
     if (confirm(`Tem certeza que deseja CANCELAR a reserva de "${livro.nome}" feita por ${nomeAluno}?`)) {
         livro.reservadoPor = null; // Limpa a propriedade de reserva
+        livro.dataDevolucao = null; // Limpa a data de devolução
         setDados(DADOS_KEY.LIVROS, livros);
         alert(`Reserva de ${nomeAluno} cancelada. Livro liberado!`);
         DOMElements.reserveModal.style.display = "none";
@@ -159,6 +225,7 @@ const liberarLivro = (index, nomeAluno) => {
 };
 
 // Configuração de Eventos
+// ... (Delegação e eventos de modais permanecem os mesmos)
 
 // Delegação para cliques em botões de ação dos livros
 DOMElements.bookList.addEventListener("click", (e) => {
